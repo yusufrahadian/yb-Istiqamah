@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #1b1b1b;
+      font-family: sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="menu"></div>
+
+  <script>
+    const container = document.getElementById("menu");
+    const totalImages = 98;
+
+    for (let i = 1; i <= totalImages; i++) {
+      const img = document.createElement("img");
+
+      const number = String(i).padStart(2, "0");
+      img.src = `asset/hal-${number}.jpg`;
+      img.alt = `hal ${i}`;
+
+      container.appendChild(img);
+    }
+  </script>
+
+</body>
+</html>
